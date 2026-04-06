@@ -4,7 +4,7 @@ A high-performance, premium Brutalist blog built with **Hugo** and managed via *
 
 ---
 
-## 🚀 Local Development & Testing
+##  Local Development & Testing
 
 To test the site locally, you can use the bundled `hugo` binary.
 
@@ -29,7 +29,7 @@ To access the CMS dashboard locally (for UI testing):
 
 ---
 
-## 📝 Writing a New Post
+##  Writing a New Post
 
 ### Via Decap CMS (Recommended)
 1. Go to your live site's admin panel: `https://roslaan.github.io/admin/`
@@ -73,19 +73,6 @@ roslaan-blog/
 
 ---
 
-## 🚢 Deployment
+## Deployment
 
 The site is automatically deployed to **GitHub Pages** whenever you push to the `main` branch via GitHub Actions.
-
-
-docker run -d \
-  -p 8082:8080 \
-  -p 50000:50000 \
-  --name jenkins \
-  -v jenkins_home:/var/jenkins_home \
-  -v /var/run/docker.sock:/var/run/docker.sock \
-  --restart=on-failure \
-  jenkins/jenkins:lts-jdk21
-
-
-  docker run -d -v jenkins_home:/var/jenkins_home --name jenkins -p 8082:8080 -p 50000:50000 --restart=on-failure jenkins/jenkins:lts-jdk21
