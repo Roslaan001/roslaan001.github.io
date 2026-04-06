@@ -1,4 +1,4 @@
-baseURL = 'https://roslaan001.github.io/roslaan/'
+baseURL = 'https://roslaan001.github.io/'
 languageCode = 'en-us'
 title = 'Roslaan'
 theme = 'essence'
