@@ -1,0 +1,23 @@
+{{ define "main" }}
+<section class="error-page hero">
+  <div class="hero-label">Error 404</div>
+  <h1 class="hero-title">Lost in the <em>Brutal</em> Void.</h1>
+  <p class="hero-sub">The page you're looking for has moved, been deleted, or never existed in the first place.</p>
+  <div style="margin-top: 3rem;">
+    <a href="/" class="btn">Return to Home</a>
+  </div>
+</section>
+
+<style>
+.error-page {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.error-page .hero-title {
+  margin-bottom: 1.5rem;
+}
+</style>
+{{ end }}

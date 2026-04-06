@@ -1,0 +1,39 @@
+baseURL = 'https://roslaan.github.io/'
+languageCode = 'en-us'
+title = 'Roslaan'
+theme = 'essence'
+
+[params]
+    description = "Ideas worth writing down — tech, culture, life, and everything in between."
+    author = "Roslaan"
+    bio = "A curious mind who writes to understand."
+    email = "abdulsomad005@gmail.com"
+    cv_url = "https://drive.google.com/file/d/1lGJ4VJvaiqBmT5PRn5y8dF2UaYsfXyC9/view?usp=sharing"
+    
+    # Social Handles
+    github = "roslaan001"
+    linkedin = "abdulsomad-olayiwola-abdulwahab"
+    twitter = "roslaan"
+    instagram = "roslaan"
+    medium = "abdulsomad005"
+    buttondown = "roslaan001"
+
+[menu]
+[[menu.main]]
+    name = "Writing"
+    url = "/"
+    weight = 10
+[[menu.main]]
+    name = "About"
+    url = "/about"
+    weight = 20
+[[menu.main]]
+    name = "CV"
+    url = "/about#cv"
+    weight = 30
+
+[markup.goldmark.renderer]
+    unsafe = true
+
+[build]
+    writeStats = true

@@ -1,0 +1,17 @@
+.DS_Store
+.hugo_build.lock
+
+# Hugo build output
+public/
+resources/
+
+# OS / editor
+.vscode/
+.idea/
+
+# Node (if you add tooling later)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*

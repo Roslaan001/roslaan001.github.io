@@ -1,0 +1,47 @@
+{{ define "main" }}
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-label">Personal Blog — Mixed Topics</div>
+    <h1 class="hero-title">Ideas worth<br /><em>writing down.</em></h1>
+    <p class="hero-sub">{{ .Site.Params.description }}</p>
+  </div>
+  <aside class="hero-side">
+    <div class="hero-card">
+      <div class="hero-card-label">Newsletter</div>
+      <h2 class="hero-card-title">Newsletter coming soon.</h2>
+      <div class="newsletter-soon" aria-live="polite">Email updates: opening soon.</div>
+      <p class="hero-card-note">Thanks for your patience.</p>
+    </div>
+    <div class="hero-meta">
+      <div class="meta-item">
+        <div class="meta-label">Posts</div>
+        <div class="meta-value">{{ len .Site.RegularPages }}</div>
+      </div>
+      <div class="meta-item">
+        <div class="meta-label">Focus</div>
+        <div class="meta-value">Tech · Culture · Life</div>
+      </div>
+    </div>
+  </aside>
+</section>
+
+<section id="articles">
+    <div class="section-tag">Recent Posts</div>
+    <h2 class="section-title">Writing.</h2>
+    
+    <div class="articles-grid">
+        {{ range $index, $page := .Site.RegularPages }}
+        <a href="{{ .RelPermalink }}" class="article-card">
+            <div class="article-number">{{ printf "00%d" (add 1 $index) | last 3 }}</div>
+            <span class="article-topic">Technology</span>
+            <h3 class="article-title">{{ .Title }}</h3>
+            <p class="article-excerpt">{{ .Summary | plainify | truncate 160 }}</p>
+            <div class="article-meta">
+                <span class="article-date">{{ .Date.Format "Jan 2006" }}</span>
+                <span class="article-read">{{ .ReadingTime }} min read</span>
+            </div>
+        </a>
+        {{ end }}
+    </div>
+</section>
+{{ end }}
